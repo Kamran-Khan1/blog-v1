@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code-Innovator</title>
+    <link
+      rel="shortcut icon"
+      href="/public/images/icon.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header flex">
+        <div class="logo flex">
+          <img src="/images/icon.png" alt="logo" />
+          <h1>Code-Innovator</h1>
+        </div>
+        <nav class="nav-bar">
+          <ul class="flex">
+            <li><a href="/">Home</a></li>
+            <li><a href="/new">New</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <% posts.forEach(post => { %>
+
+        <div class="blog">
+          <h1 class="title"><%= post.title %></h1>
+          <p><%= post.blog %></p>
+          <div class="author">
+            <p>Author: <i><%= post.author %> </i></p>
+          </div>
+          <div class="edit-container">
+            <button class="edit">
+              <a href="/edit/<%= post.id %>" class="text-style">Edit</a>
+            </button>
+            <button class="delete">
+              <a href="/delete/<%= post.id %>" class="text-style">Delete</a>
+            </button>
+          </div>
+        </div>
+        <% }); %>
+      </main>
+    </div>
+  </body>
+</html>

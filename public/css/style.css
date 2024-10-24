@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.flex {
+  display: flex;
+}
+
+.container {
+  width: 900px;
+  margin: 20px auto;
+  padding: 40px;
+  border: 2px solid rgb(67, 67, 67);
+  border-radius: 10px;
+  background-color: rgb(222 234 238);
+  box-shadow: 3px 5px 10px #a2a1aa;
+}
+
+.header {
+  width: 900px;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.logo > img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.logo {
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-bar > ul {
+  gap: 40px;
+  height: 50px;
+  align-items: center;
+}
+
+.nav-bar ul li {
+  list-style: none;
+}
+
+.nav-bar ul a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nav-bar ul li a:hover {
+  color: rgb(89, 89, 89);
+  font-weight: bolder;
+}
+
+.blog {
+  background-color: rgb(254, 254, 254);
+  padding: 10px;
+  border: 1px solid rgba(43, 43, 43, 0.474);
+  border-radius: 5px;
+  margin-top: 20px;
+}
+.blog > p {
+  text-align: justify;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.edit {
+  /* background-color: green; */
+  background-color: transparent;
+  width: 60px;
+  font-size: 15px;
+  border: 1px solid #043d0b;
+  border-radius: 5px;
+  padding: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.edit > a {
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: rgb(0, 113, 13);
+}
+
+.delete {
+  /* background-color: rgb(161, 3, 3); */
+  background-color: transparent;
+  width: 60px;
+  font-size: 15px;
+  border: 1px solid #3d0404;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  padding: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.delete:hover {
+  background-color: rgb(161, 3, 3);
+}
+.delete > a:hover {
+  color: white;
+}
+
+.edit:hover {
+  background-color: green;
+}
+.edit > a:hover {
+  color: white;
+}
+
+.delete > a {
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: rgba(175, 0, 0, 0.999);
+}
+
+.edit-container {
+  margin: 10px 0px 5px 0px;
+}
+
+.title {
+  color: rgb(203, 89, 31);
+  padding: 10px;
+}
+
+.author > p {
+  color: rgb(69, 69, 69);
+  font-size: 13px;
+  padding: 7px 10px;
+}
+
+.author p i {
+  color: #2d7693;
+  font-weight: bold;
+}
+
+button:hover {
+  cursor: pointer;
+}
