@@ -47,7 +47,7 @@ app.post("/post/update/:id", async (req, res) => {
     `${URL}/api/update/${req.params.id}`,
     req.body
   );
-  console.log(response.data);
+  // console.log(response.data);
   res.redirect("/");
 });
 
