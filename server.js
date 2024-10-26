@@ -1,9 +1,15 @@
 import express from "express";
 import bodyParser from "body-parser";
 import axios from "axios";
+import env from "dotenv";
 const app = express();
-const PORT = 4000;
-const URL = "http://localhost:3000";
+
+env.config({
+  path: ".env",
+});
+
+const PORT = process.env.PORT || PORT;
+const URL = process.env.API;
 //Using middleware
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -25,8 +31,8 @@ app.get("/new", (req, res) => {
 app.post("/post", async (req, res) => {
   try {
     const response = await axios.post(`${URL}/api/post`, req.body);
-    console.log(response.data);
-    console.log(req.body);
+    // console.log(response.data);
+    // console.log(req.body);
     res.redirect("/");
   } catch (error) {
     console.log(error.message);
