@@ -1,9 +1,12 @@
 import express from "express";
 import bodyParser from "body-parser";
-
+import env from "dotenv";
 const app = express();
-const PORT = 3000;
+env.config({
+  path: "./.env",
+});
 
+const PORT = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json()); // It's very much inmportant to use this here
 //We are gettitng All the data
